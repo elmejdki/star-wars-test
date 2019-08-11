@@ -8,7 +8,7 @@ This repository is a star wars IPA explorer where we can explorer different star
 
 # Requirements
 
-in order to run this project in your machine you must have the latest version of nodejs installed after that you can open the project folder in a command prompt and run:
+In order to run this project in your machine you must have the latest version of nodejs installed after that you can open the project folder in a command prompt and run:
 
 ```
 npm install
