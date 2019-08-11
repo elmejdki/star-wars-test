@@ -12,7 +12,6 @@ class App extends Component{
             next         : true,
             characters   : [],
             searchField  : '',
-            activateModal: false,
             planet       : null
         }
     }
