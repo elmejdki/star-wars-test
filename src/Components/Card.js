@@ -43,7 +43,7 @@ const Card = ({
                 <img 
                     className ="profile-img" 
                     src = { `https://robohash.org/${ id }?200x200&set=set2` } 
-                    alt = "luke skywalker" />
+                    alt = { name } />
             </div>
             <div className="bottom-part">
                 <ul className="owner-ship">
