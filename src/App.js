@@ -2,6 +2,7 @@ import React, { Component} from 'react';
 import CardList from './Components/CardList';
 import CardFilter from './Components/CardFilter';
 import Scroll from './Components/Scroll';
+import Modal from './Components/Modal';
 
 class App extends Component{
     constructor(){
@@ -37,12 +38,12 @@ class App extends Component{
         fetch( planet )
             .then( response => response.json() )
             .then( rs => {
-                this.setState({ planet: rs, activateModal: true });
+                this.setState({ planet: rs });
             });
     }
 
     handleClose = () => {
-      this.setState({ planet: null, activateModal: false });
+      this.setState({ planet: null });
     }
 
     componentWillMount() {
@@ -77,32 +78,14 @@ class App extends Component{
                         handleClick = { this.handleClick }
                         characters = { filteredcharacters } />
                 </Scroll>
-                {!this.props.closebutton ? null :
-                  <div
-                    className="backdrop-close"
-                    onClick={this.props.close}
-                  >
-                    <div className="icon-cross"></div>
-                  </div>
-                }
-                  { !planet ? null : 
-                      (<div className="modal">
-                          <div className="modal-content">
-                              <div className="modal-header">
-                                  <span className="close" onClick={ this.handleClose }>&times;</span>
-                              </div>
-                              <div className="modal-body">
-                                  <h2>Planet Name: { planet.name }</h2>
-                                  <div className="planet-info">
-                                      <span>Population: {planet.population}</span>
-                                      <span>Climate: {planet.climate}</span>
-                                      <span>Diameter: {planet.diameter} KM</span>
-                                      <span>Terrain: {planet.terrain}</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>)
-                  }                
+                    { !planet ? null : 
+                        (
+                            <Modal 
+                                handleClose = { this.handleClose } 
+                                planet = { planet } 
+                                />
+                        )
+                    }                
             </div>
         );
     }
