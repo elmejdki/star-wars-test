@@ -19,6 +19,3 @@ to install all the required dependencies then to start the project you should ru
 ```
 npm start
 ```
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
