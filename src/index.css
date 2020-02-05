@@ -27,6 +27,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     box-shadow: 0px 3px 5px  rgba(0,0,0,0.2);
+    height: 20vh;
 }
 
 .title {
@@ -38,17 +39,18 @@ body {
 
 .crowd-icon {
     display: block;
-    width: 230px;
-    height: 230px;
+    width: 60px;
+    height: 60px;
     float: left;
-    background-image: url(img/crowd-of-users.svg);
+    background-image: url(./img/crowd-of-users.svg);
+    background-repeat: no-repeat;
     background-size: contain;
     margin-right: 30px;
 }
 
 h1 {
     font-family: codystar;
-    font-size: 60px;
+    font-size: 30px;
     color: var(--main-color);
 }
 
@@ -60,12 +62,12 @@ h1 {
 }
 
 .card {
-    height: 250px;
-    width: 400px;
+    height: 150px;
+    width: 300px;
     box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
     border-radius: 30px;
     border: 2px solid var(--border-color);
-    padding: 20px;
+    padding: 10px;
     margin: 15px 10px;
 }
 
@@ -73,14 +75,14 @@ h1 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100px;
+    height: 69px;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 4px;
 }
 
 .text-info {
     margin: 7px 0px;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .person-icon {
@@ -91,8 +93,8 @@ h1 {
     display: block;
     float: left;
     margin-right: 10px;
-    width: 20px;
-    height: 30px;
+    width: 15px;
+    height: 20px;
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -119,19 +121,20 @@ h1 {
 }
 
 .profile-img {
-    height: 100px;
-    width: 100px;
+    height: 65px;
+    width: 65px;
     border-radius: 50%;
     position: absolute;
-    right: -10px;
-    top: -50px;
+    right: -5px;
+    top: -35px;
     border: solid 2px var(--main-color);
     background-color: white;
 }
 
 #nextList {
-    width: 90px;
-    height: 90px;
+    width: 50px;
+    height: 50px;
+    padding: 30px;
     border-radius: 50%;
     background: none;
     outline: none;
@@ -160,7 +163,7 @@ h1 {
 .bottom-part {
     display: flex;
     justify-content: start;
-    margin: 10px 0px 0px 10px;
+    margin: 2px 20px;
 }
 
 .owner-ship {
@@ -170,11 +173,15 @@ h1 {
 
 .owner-ship li {
     margin-left: 15px;
+    font-size: 9px;
     padding: 2px;
 }
 
+.owner-ship h4 {
+    font-size: 12px;
+}
 .planet {
-    margin: 5px 70px;
+    margin: 5px 30px;
     width: 100px;
     height: 100px;
     cursor: pointer;
@@ -182,13 +189,13 @@ h1 {
 
 .planet-icon {
     display: block;
-    width: 50px;
-    height: 50px;
-    background-image: url(img/jupiter.svg);
+    width: 40px;
+    height: 40px;
+    background-image: url(/static/media/jupiter.236ec08b.svg);
     background-size: contain;
     background-position: center;
     border-radius: 50%;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 .planet:hover .planet-icon {
@@ -201,21 +208,23 @@ h1 {
 
 .planet-text {
     font-weight: 600;
+    margin-left: 10px;
+    font-size: 12px;
 }
 
 .scroll {
     overflow-y: scroll;
-    height: 650px;
+    height: 80vh;
     border: solid 1px rgba(0,0,0,0.2);
 }
 
 .filter {
-  border: #D57E11 solid 3px;
-  padding: 10px 15px;
-  width: 300px;
-  outline: none;
-  margin: 10px;
-  border-radius: 4px;
+    border: #D57E11 solid 2px;
+    padding: 5px 10px;
+    width: 150px;
+    outline: none;
+    margin: 10px;
+    border-radius: 4px;
 } 
 
 .modal {
